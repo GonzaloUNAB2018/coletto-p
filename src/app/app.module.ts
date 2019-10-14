@@ -23,12 +23,12 @@ import { Passenger } from '../users/fb.passenger';
 
 const firebaseConfig = {
   apiKey: "AIzaSyDaRTTHOVxs0RwAw9baRO6_6JSGiipTQu8",
-    authDomain: "coletto-app.firebaseapp.com",
-    databaseURL: "https://coletto-app.firebaseio.com",
-    projectId: "coletto-app",
-    storageBucket: "coletto-app.appspot.com",
-    messagingSenderId: "953525692835",
-    appId: "1:953525692835:web:dfeb73a0c67e5717c0d216"
+  authDomain: "coletto-app.firebaseapp.com",
+  databaseURL: "https://coletto-app.firebaseio.com",
+  projectId: "coletto-app",
+  storageBucket: "coletto-app.appspot.com",
+  messagingSenderId: "953525692835",
+  appId: "1:953525692835:web:985b4ab468d89643c0d216"
 
 };
 

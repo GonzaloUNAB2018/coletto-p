@@ -16,8 +16,6 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   rootPage: any;
-  //rootPage: any;
-  pages: Array<{title: string, component: any}>;
 
   logged: boolean;
   uid: string;
@@ -31,41 +29,24 @@ export class MyApp {
     public toastCtrl: ToastController,
     public passenger: Passenger,
     ) {
-    this.initializeApp();
-    
-    
-    // used for an example of ngFor and navigation
-    this.pages = [
-      /*{ title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage }*/
-    ];
-
-  }
-
-  initializeApp() {
-    this.platform.ready().then(() => {
-      // Okay, so the platform is ready and our plugins are available.
-      // Here you can do any higher level native things you might need.
-      this.statusBar.styleDefault();
-      this.splashScreen.hide();
-    });
-
-    this.afAuth.auth.onAuthStateChanged(user=>{
-      if (user){
-        this.logged = true;
-        this.nav.setRoot(HomePage);
-      }else{
-        this.logged = false;
-        this.nav.setRoot(WelcomePage);
-      }
-    })
-
-  }
-
-  openPage(page) {
-    // Reset the content nav to have just this page
-    // we wouldn't want the back button to show in this scenario
-    this.nav.setRoot(page.component);
+      this.platform.ready().then(() => {
+        // Okay, so the platform is ready and our plugins are available.
+        // Here you can do any higher level native things you might need.
+        this.statusBar.styleDefault();
+        this.splashScreen.hide();
+        this.rootPage = WelcomePage;
+        /*this.afAuth.auth.onAuthStateChanged(user=>{
+          if (user){
+            this.logged = true;
+            this.nav.setRoot(HomePage);
+          }else{
+            this.logged = false;
+            this.nav.setRoot(WelcomePage);
+          }
+        })*/
+      });
+  
+      
   }
 
   logout(){
@@ -82,8 +63,8 @@ export class MyApp {
         });
         toast.present();
       });
-    }).catch(function(error) {
-      // An error happened.
+    }).catch(error=> {
+      alert(error)
     });
   }
   

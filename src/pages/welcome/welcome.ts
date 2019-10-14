@@ -28,7 +28,6 @@ export class WelcomePage {
     public navParams: NavParams,
     public menuCtrl: MenuController,
     private afAuth: AngularFireAuth,
-    private afDb: AngularFireDatabase,
     public toastCtrl: ToastController,
     public passenger: Passenger,
 
@@ -42,17 +41,7 @@ export class WelcomePage {
   }
 
   login(){
-    this.afAuth.auth.signInAnonymously().catch(err =>{
-      var errorCode = err.code;
-      var errorMessage = err.message;
-
-      if (errorCode === 'auth/operation-not-allowed') {
-        alert('You must enable Anonymous auth in the Firebase Console.');
-      } else {
-        console.error(err);
-      }
-    
-    }).then(()=>{
+    this.afAuth.auth.signInAnonymously().then(()=>{
       this.uid = this.afAuth.auth.currentUser.uid;
       console.log(this.uid);
       this.navCtrl.setRoot(HomePage);
@@ -63,6 +52,14 @@ export class WelcomePage {
         cssClass: 'toastLogout'
       });
       toast.present();
+    }).catch(err =>{
+      var errorCode = err.code;
+      if (errorCode === 'auth/operation-not-allowed') {
+        alert('You must enable Anonymous auth in the Firebase Console.');
+      } else {
+        console.error(err);
+      }
+    
     })
     
     }
