@@ -1,0 +1,46 @@
+page-acuerdo {
+
+    ion-navbar{
+        background-color: color($colors, secondary);
+    }
+
+    #background{
+        background-color: color($colors, secondary);
+    }
+
+    .toolbar-background{
+        background-color: color($colors, secondary);
+        
+    }
+
+    .icon{
+        color: color($colors, light);
+    }
+
+    h1{
+        color: color($colors, light);
+        text-align: center
+    }
+    
+    h2{
+        color: color($colors, light);
+        text-align: center
+    }
+
+    p{
+        color: color($colors, light);
+        text-align: justify;
+    }
+
+    .acuerdo{
+        font-size: 17px;
+        background-color: #7777775e;
+
+    }
+
+    .button{
+        background: color($colors, primary);
+        font-family: Arial, Helvetica, sans-serif;
+        }
+
+}

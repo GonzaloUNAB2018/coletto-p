@@ -1,0 +1,25 @@
+<ion-menu [content]="content">
+  
+  <ion-content>
+    <div class="fondo" padding>
+      <div align="center">
+        <img src="./../assets/imgs/coletto logo 12 transparente.png" width="100" height="100">
+      </div>
+      <br>
+      <h1 class="nombreApp" align="center">COLETTO</h1><br>
+    </div>
+    <ion-list align="center">
+      <button ion-button menuClose round *ngIf="logged" (click)="logout()" class="buttonMenu">
+        <p class="listFont">Cerrar Sesión</p>
+      </button>
+    </ion-list>
+  </ion-content>
+
+  <ion-footer class="fondo" padding>
+    <h5 align="center">Todos los derechos reservados.</h5>
+  </ion-footer>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

@@ -1,0 +1,58 @@
+page-welcome {
+    .welcome{
+        background-image: url(./../../assets/imgs/background.jpg);
+        background-size: 350%;
+        background-position-x: -540px;
+        //background-attachment: fixed;
+
+        h1{
+            font-size: 52px;
+            margin-top:50px
+        }
+        .marginTop{
+            margin-top:150px;
+        }
+        .logo{
+            height: 100px;
+        }
+    }
+
+    p{
+        color: color($colors, light);
+        text-align: center;
+        text-shadow: 4px;
+        font-size: 17px;
+    }
+
+    .title{
+        font-family: Arial, Helvetica, sans-serif;
+        color: color($colors, light);
+    }
+
+    .button1{
+        background: color($colors, secondary);
+        font-family: Arial, Helvetica, sans-serif;
+        }
+
+    .button2{
+        background: color($colors, secondary);
+        font-family: Arial, Helvetica, sans-serif;
+
+    }
+
+    .footer{
+        background-color: #75757544;
+    }
+
+    .footer1{
+        font-size: 5vw;
+        color: color($colors, light);
+        
+    }
+
+    .footer2{
+        font-size: 5vw;
+        color: color($colors, secondary);
+    }
+
+}

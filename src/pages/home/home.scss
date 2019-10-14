@@ -1,0 +1,88 @@
+page-home {
+
+    .selected{
+        font-size: 15px;
+        text-align: center;
+
+    }
+
+    .bgInfo{
+        background-color: #b4b4b4;
+    }
+
+
+    .logout{
+        font-size: 7vw;
+        position: relative;
+        text-align: center;
+    }
+
+    #map{
+        display: block;
+        height: 70%;
+        width: 100%;
+        background-color: color($colors, secondary);
+
+    }
+
+    .fabColor{
+        color: color($colors, danger);
+    }
+
+    .scroll-content{
+        background-color: #c9c9c9;
+    }
+
+    .logo{
+        width: 60px;
+    }
+
+    /*ion-grid{
+        padding: 0%;
+    }
+
+    .item-cover{
+        padding: 0% 0% 0% 0%; 
+    }
+
+    .col{
+        padding: 0% 0% 0% 0%;
+    }
+
+    .item{
+        padding: 0% 0% 0% 0%;
+    }*/
+
+    ion-select {
+        //height: 100%;
+        //width: 100%;
+        //padding: 10px 10px 10px 10px;
+        border: ridge;
+        border-radius: 2px;
+        background-color: color($colors, secondary);
+        //font-style: italic;
+    }
+
+    .select-placeholder.select-text{
+        color: color($colors, primary)
+    }
+
+    .select-text{
+        color: color($colors, primary);
+        font-size: 18px;
+    }
+
+    .label.label-md{
+        color: color($colors, secondary);
+        font-size: 18px;
+  
+    }
+
+    $label-md-margin-bottom: 10px;
+    $select-md-placeholder-color: color($colors, secondary);
+
+
+    //$select-md-padding-end: 0px;
+
+    //$action-sheet-md-text-align: center;
+}

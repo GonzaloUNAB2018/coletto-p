@@ -1,0 +1,74 @@
+<ion-content >
+  <ion-fab left top>
+    <button ion-fab menuToggle color="primary">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+  </ion-fab>
+
+  <div id="map">
+  </div>
+  
+  <ion-fab right top class="logo">
+      <img (click)="toAboutPage()" src="./../../assets/imgs/coletto logo 12 transparente.png">
+  </ion-fab>
+
+  <div>
+    <ion-item color="primary" (ngSubmit)="createCircle()" *ngIf="lineSelected">
+      <ion-label>Seleccione Línea</ion-label>
+      <ion-select 
+      [(ngModel)]="coletto.line" 
+      [selectOptions]="colettoLineOptions" 
+      interface="popover"
+      placeholder="Elija Una"
+      >
+        <ion-option value="7A" (ionSelect)="lineaSelected()">Línea 7A</ion-option>
+        <ion-option value="7B" (ionSelect)="lineaSelected()">Línea 7B</ion-option>
+        <ion-option value="109" (ionSelect)="lineaSelected()">Línea 109</ion-option>
+        <ion-option value="33" (ionSelect)="lineaSelected()">Línea 33</ion-option>
+        <ion-option value="31" (ionSelect)="lineaSelected()">Línea 31</ion-option>
+  
+      </ion-select>
+    </ion-item>
+    <ion-item color="primary" *ngIf="ruteSelected && !lineSelected && !buttonOpen">
+      <ion-label>Seleccione Ruta</ion-label>
+      <ion-select 
+      [(ngModel)]="coletto.rute" 
+      [selectOptions]="colettoLineOptions" 
+      interface="popover"
+      placeholder="Elija Una"
+      >
+        <ion-option value="Plan - Cerro" (ionSelect)="rutesSelected()">Plan - Cerro</ion-option>
+        <ion-option value="Cerro - Plan" (ionSelect)="rutesSelected()">Cerro - Plan</ion-option>
+      </ion-select>
+    </ion-item>
+  </div>
+  <div align="center" class="bgInfo">
+    <ion-row>
+      <ion-col>
+        <p class="selected" *ngIf="!lineSelected"> Línea <b>{{coletto.line}}</b> </p>
+      </ion-col>
+      <ion-col>
+        <p class="selected" *ngIf="buttonOpen"> Ruta <b>{{coletto.rute}}</b> </p>
+      </ion-col>
+    </ion-row>
+  </div>
+  <ion-row>
+    <ion-col>
+      <div align="center">
+        <button ion-button color="secondary" round *ngIf="buttonOpen">
+          <b>Buscar Coletto</b>
+        </button>
+      </div>
+    </ion-col>
+    <ion-col>
+      <div align="center">
+        <button ion-button round color="danger" *ngIf="buttonOpen" (click)="back()">
+          <b>Volver selección</b>
+        </button>
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-content>
+<ion-footer padding>
+  <p class="footer" align="center"><b>Aqui habrá AdWords</b></p>
+</ion-footer>

@@ -1,0 +1,35 @@
+<ion-header>
+  <div>
+      
+  </div>
+</ion-header>
+
+<ion-content padding class="welcome">
+  <br><br><br><br><br><br>
+  <!--img src="assets/imgs/logo.png" class="logo"/-->
+  <ion-grid>
+    <ion-row>
+      <ion-col align="center" (click)="aboutPage()">
+        <img src="./../../assets/imgs/coletto logo 12 transparente.png" width="130" height="130">
+        <h1 class="title"><b>Coletto</b></h1>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid >
+    <ion-row>
+      <ion-col center text-center>
+        <button class="button1" ion-button round large (click)="login()">Inicia tu Recorrido</button>
+        <p (click)="toAcuerdoPage()"><b>Acuerdo de Privacidad</b></p>
+      </ion-col>
+    </ion-row>
+    <!--ion-row>
+      <ion-col center text-center>
+        <button class="button2" ion-button round large (click)="signup()">Registrar</button>
+      </ion-col>
+    </ion-row-->
+  </ion-grid>
+</ion-content>
+<ion-footer>
+  <ion-title class="footer" align="center" (click)="aboutPage()"><a class="footer1">Desarrollado por </a><a class="footer2">One Technologies</a></ion-title>
+</ion-footer>

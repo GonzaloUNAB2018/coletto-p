@@ -1,0 +1,36 @@
+page-about {
+
+    .scroll-content{
+        background-color: color($colors, secondary);  
+    }
+
+    .toolbar-background.toolbar-background-md{
+        background-color: color($colors, secondary);
+    }
+
+    .icon{
+        color: color($colors, light);
+    }
+
+    h1{
+        color: color($colors, light);
+        text-align: center
+    }
+    
+    h2{
+        color: color($colors, light);
+        text-align: center
+    }
+
+    p{
+        color: color($colors, light);
+        text-align: justify;
+    }
+
+    .about{
+        font-size: 17px;
+        background-color: #7777775e;
+    }
+
+    
+}
