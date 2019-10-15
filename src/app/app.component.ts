@@ -35,7 +35,7 @@ export class MyApp {
         this.statusBar.styleDefault();
         this.splashScreen.hide();
         this.rootPage = WelcomePage;
-        /*this.afAuth.auth.onAuthStateChanged(user=>{
+        this.afAuth.auth.onAuthStateChanged(user=>{
           if (user){
             this.logged = true;
             this.nav.setRoot(HomePage);
@@ -43,7 +43,7 @@ export class MyApp {
             this.logged = false;
             this.nav.setRoot(WelcomePage);
           }
-        })*/
+        })
       });
   
       
