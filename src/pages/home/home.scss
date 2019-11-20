@@ -1,15 +1,38 @@
 page-home {
 
+    .card.card-md{
+        border-radius: 20px;
+        position: absolute;
+        bottom: 0px;
+        height: 180px;
+        background-color: color($colors, primary);
+    }
+
+    .fab-md-primary {
+        color: color($colors, primary);
+        background-color: transparent;
+    }
+
+    .fab-md{
+        -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 rgba(0, 0, 0, 0);
+        box-shadow: transparent;
+    }
+
+    .fab ion-icon {
+        font-size: 3.4rem;
+    }
+
+    .logo{
+        .fab-md{
+            background-color: transparent;
+        }
+    }
+
     .selected{
-        font-size: 15px;
+        font-size: 20px;
         text-align: center;
-
+        color: color($colors, secondary)
     }
-
-    .bgInfo{
-        background-color: #b4b4b4;
-    }
-
 
     .logout{
         font-size: 7vw;
@@ -19,70 +42,59 @@ page-home {
 
     #map{
         display: block;
-        height: 70%;
+        height: 100%;
         width: 100%;
-        background-color: color($colors, secondary);
 
-    }
-
-    .fabColor{
-        color: color($colors, danger);
-    }
-
-    .scroll-content{
-        background-color: #c9c9c9;
     }
 
     .logo{
         width: 60px;
     }
 
-    /*ion-grid{
-        padding: 0%;
+    .item-md.item-block .item-inner {
+        padding-right: 8px;
+        border-bottom: 0;
     }
 
-    .item-cover{
-        padding: 0% 0% 0% 0%; 
-    }
-
-    .col{
-        padding: 0% 0% 0% 0%;
-    }
-
-    .item{
-        padding: 0% 0% 0% 0%;
-    }*/
-
-    ion-select {
-        //height: 100%;
-        //width: 100%;
-        //padding: 10px 10px 10px 10px;
-        border: ridge;
-        border-radius: 2px;
-        background-color: color($colors, secondary);
-        //font-style: italic;
-    }
-
-    .select-placeholder.select-text{
-        color: color($colors, primary)
-    }
-
-    .select-text{
-        color: color($colors, primary);
-        font-size: 18px;
+    .item-md{
+        background-color: transparent;
     }
 
     .label.label-md{
-        color: color($colors, secondary);
-        font-size: 18px;
-  
+        color: color($colors, secondary)
     }
 
-    $label-md-margin-bottom: 10px;
-    $select-md-placeholder-color: color($colors, secondary);
+    .select-md .select-icon .select-icon-inner{
+        color: color($colors, secondary)
+    }
 
+    .select-placeholder.select-text{
+        color: color($colors, secondary)
+    }
 
-    //$select-md-padding-end: 0px;
+    .select-text{
+        font-size: 18px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;;
+    }
 
-    //$action-sheet-md-text-align: center;
+    .label.label-md{
+        font-size: 18px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;;
+    }
+
+    .scroll-content {
+        background-color: color($colors, light);
+    }
+
+    .gm-style-cc{
+        div{
+            opacity: 0;
+        }
+    }
+
+    .slide-one{
+        position: absolute;
+        top: 10px
+    }
+    
 }

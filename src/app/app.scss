@@ -22,23 +22,23 @@
 .nombreApp{
     text-align: center;
     font-size: 25px;
-    color: color($colors, secondary)
+    color: color($colors, primary)
 }
 
 .fondo{
-    background-color: color($colors, primary)
+    background-color: color($colors, secondary)
 }
 
 .menu-inner{
     .content.content-md{
         .scroll-content{
-            background-color: color($colors, primary)
+            background-color: color($colors, secondary)
         }
     }
 }
 
 .buttonMenu{
-    background-color: color($colors, secondary);
+    background-color: color($colors, primary);
 }
 
 .listFont{

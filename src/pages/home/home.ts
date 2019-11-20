@@ -33,7 +33,9 @@ export class HomePage {
   colettoASOptions = {};
   appSystem: boolean;
   pasajero = 'assets/imgs/GPS.png';
-  paleta1 = 'assets/imgs/patrocinados/paletaFalabella.png';
+  paleta1 = '';
+  noColetto: boolean;
+  //paleta1 = 'assets/imgs/patrocinados/paletaFalabella.png';
   latitude: any;
   longitude: any;
   myLatLng: { 
@@ -54,6 +56,8 @@ export class HomePage {
   };
   cityCircle : any;
   passenger = {} as Passenger;
+  mapCenter: { lat: any; lng: any; };
+  first: boolean = true
 
   constructor(
     public platform: Platform,
@@ -112,9 +116,10 @@ export class HomePage {
 
     // create LatLng object
     this.myLatLng = {lat: this.latitude, lng: this.longitude};
+    this.mapCenter = {lat: this.latitude - 0.003, lng: this.longitude}
 
     this.mapOption = {
-      center: this.myLatLng,
+      center: this.mapCenter,
       zoom: 15.5,
       tilt: 90,
       disableDefaultUI: true,
@@ -201,8 +206,8 @@ export class HomePage {
 
   getCircle() {
 
-    this.map.setZoom(13.5);
-    this.map.setCenter(new google.maps.LatLng(this.myLatLng));
+    this.map.setZoom(14);
+    this.map.setCenter(new google.maps.LatLng({lat: this.latitude - 0.007, lng: this.longitude}));
 
     this.circle = {
       center: this.myLatLng,
@@ -211,25 +216,25 @@ export class HomePage {
 
     if(this.isNight()){
       this.cityCircle = new google.maps.Circle({
-        strokeColor: '#FF0000',
+        strokeColor: '#2a613b',
         strokeOpacity: 0,
         strokeWeight: 2,
-        fillColor: '#8698CC',
+        fillColor: '#38864f',
         fillOpacity: 0.35,
         map: this.map,
         center: this.circle.center,
-        radius: Math.sqrt(this.circle.location) * 100
+        radius: Math.sqrt(this.circle.location) * 70
       })
     }else{
       this.cityCircle = new google.maps.Circle({
-        strokeColor: '#FF0000',
+        strokeColor: '#2a613b',
         strokeOpacity: 0,
         strokeWeight: 2,
-        fillColor: '#CC8686',
+        fillColor: '#38864f',
         fillOpacity: 0.35,
         map: this.map,
         center: this.circle.center,
-        radius: Math.sqrt(this.circle.location) * 100
+        radius: Math.sqrt(this.circle.location) * 70
       })
     }
   }
@@ -238,6 +243,7 @@ export class HomePage {
     this.getCircle();
     this.lineSelected = false;
     this.ruteSelected = true;
+    this.paleta1 = '';
   }
 
   rutesSelected(){
@@ -247,12 +253,13 @@ export class HomePage {
       duration: 1500
     });
     loader.present().then(()=>{
-        const alert = this.alertCtrl.create({
+      this.noColetto = true;
+        /*const alert = this.alertCtrl.create({
           title: '¡Sin Colettos Disponibles!',
           subTitle: 'Intente denuevo mas tarde',
           buttons: ['OK']
         });
-        alert.present();
+        alert.present();*/
       }
     );
   }
