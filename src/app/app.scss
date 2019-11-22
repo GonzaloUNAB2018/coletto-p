@@ -26,13 +26,13 @@
 }
 
 .fondo{
-    background-color: color($colors, secondary)
+    background-color: color($colors, miniFabBotton)
 }
 
 .menu-inner{
     .content.content-md{
         .scroll-content{
-            background-color: color($colors, secondary)
+            background-color: color($colors, miniFabBotton)
         }
     }
 }
@@ -41,7 +41,7 @@
     background-color: color($colors, primary);
 }
 
-.listFont{
+.footer-text{
     color: color($colors, light);
-    font-size: 20px;
+    font-size: 1.6rem;
 }

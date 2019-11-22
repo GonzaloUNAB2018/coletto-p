@@ -88,4 +88,6 @@
     <plugin name="cordova-plugin-geolocation" spec="^4.0.2">
         <variable name="GEOLOCATION_USAGE_DESCRIPTION" value="To locate Coletto App" />
     </plugin>
+    <plugin name="cordova-plugin-nativestorage" spec="^2.3.2" />
+    <plugin name="cordova-plugin-x-toast" spec="^2.7.2" />
 </widget>

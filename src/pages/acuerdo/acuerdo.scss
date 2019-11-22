@@ -1,15 +1,15 @@
 page-acuerdo {
 
     ion-navbar{
-        background-color: color($colors, secondary);
+        background-color: color($colors, primary);
     }
 
     #background{
-        background-color: color($colors, secondary);
+        background-color: color($colors, primary);
     }
 
     .toolbar-background{
-        background-color: color($colors, secondary);
+        background-color: color($colors, primary);
         
     }
 
@@ -39,7 +39,7 @@ page-acuerdo {
     }
 
     .button{
-        background: color($colors, primary);
+        background: color($colors, miniFabBotton);
         font-family: Arial, Helvetica, sans-serif;
         }
 

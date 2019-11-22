@@ -1,0 +1,35 @@
+<ion-content class="tutorial-page">
+  <ion-slides pager>
+    <ion-slide class="one">
+      <ion-toolbar>
+        <ion-buttons end>
+          <button ion-button color="secondary"(click)="goToHomePage()">Saltar</button>
+        </ion-buttons>
+      </ion-toolbar>
+      <p class="title" margin-bottom>Bienvenido a Coletto</p>
+      <p class="text-body-one" margin-top>
+        Presentamos la aplicación que te conecta con el sistema de transporte colectivo de tu ciudad.
+      </p>
+    </ion-slide>
+    <ion-slide class="two">
+      <ion-toolbar>
+        <ion-buttons end>
+          <button ion-button color="secondary"(click)="goToHomePage()">Saltar</button>
+        </ion-buttons>
+      </ion-toolbar>
+      <p class="text-body-two" margin-top>
+        Recorre la ciudad a bajo costo, rápido y cómodo.<br><b>Vuelve a tomar un Coletto.</b>
+      </p>
+    </ion-slide>
+    <ion-slide class="three">
+      <ion-toolbar>
+      </ion-toolbar>
+      <img src="./assets/imgs/logo_tr.png" class="slide-image"/>
+      <h2 class="slide-title">Pide tu Coletto</h2>
+      <button ion-button large clear icon-end color="light" (click)="goToHomePage()">
+        Comencemos
+        <ion-icon name="arrow-forward"></ion-icon>
+      </button>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

@@ -68,7 +68,7 @@ export class HomePage {
     public menuCtrl: MenuController,
     private afAuth: AngularFireAuth,
     public afDb: AngularFireDatabase,
-    public toastCtrl: ToastController,
+    //public toastCtrl: ToastController,
     public googleMaps: GoogleMaps,
     private geolocation: Geolocation,
     public paletas: Paletas,

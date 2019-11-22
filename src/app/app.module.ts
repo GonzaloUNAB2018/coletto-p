@@ -13,6 +13,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { GoogleMaps } from '@ionic-native/google-maps';
 import { Geolocation } from '@ionic-native/geolocation';
+import { NativeStorage } from '@ionic-native/native-storage';
+import { Toast } from '@ionic-native/toast';
 
 //Firebase
 import { AngularFireModule } from 'angularfire2';
@@ -20,6 +22,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { Paletas } from '../publicidad/paletas';
 import { Passenger } from '../users/fb.passenger';
+import { IntroductionPage } from '../pages/introduction/introduction';
 
 const firebaseConfig = {
   apiKey: "AIzaSyDaRTTHOVxs0RwAw9baRO6_6JSGiipTQu8",
@@ -37,6 +40,7 @@ const firebaseConfig = {
     MyApp,
     HomePage,
     ListPage,
+    IntroductionPage
   ],
   imports: [
     BrowserModule,
@@ -54,6 +58,7 @@ const firebaseConfig = {
     MyApp,
     HomePage,
     ListPage,
+    IntroductionPage
   ],
   providers: [
     StatusBar,
@@ -62,7 +67,9 @@ const firebaseConfig = {
     Geolocation,
     Paletas,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    Passenger
+    Passenger,
+    NativeStorage,
+    Toast
   ]
 })
 export class AppModule {}

@@ -1,0 +1,85 @@
+page-introduction {
+    .tutorial-page {
+
+        .toolbar-background {
+          background: #fff;
+          border-color: transparent;
+        }
+      
+        .slide-zoom {
+          height: 100%;
+        }
+      
+        .slide-title {
+          margin-top: 2.8rem;
+          text-shadow: 1px 1px white;
+          color: color($colors, intro-text);
+          font-size: 30px;
+        }
+      
+        .slide-image {
+          max-height: 50%;
+          max-width: 60%;
+          margin: 18px 0;
+        }
+    }
+
+    .toolbar-background.toolbar-background-md{
+        background-color: transparent;
+    }
+
+    .one{
+        background-image: url(./../../assets/imgs/001.jpg);
+        background-size: 300%;
+        background-position-x: -50px;
+    }
+
+    .two{
+        background-image: url(./../../assets/imgs/002.jpg);
+        background-size: 300%;
+        background-position-x: -50px;
+    }
+
+    .three{
+        background-image: url(./../../assets/imgs/004.jpg);
+        background-size: 300%;
+        background-position-x: -200px;
+    }
+
+    .button-inner{
+        font-size: 25px;
+    }
+
+
+    .title{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 30px;
+        color: white;
+        text-shadow: 2px 2px rgb(19, 20, 20);
+        margin-top: 60px;
+    }
+    
+
+    .text-body-one{
+        font-family: 'Arial Black';
+        font-size: 20px;
+        color: white;
+        text-shadow: 2px 2px rgb(19, 20, 20);
+        margin-left: 20px;
+        margin-right: 20px;
+        position: absolute;
+        bottom: 20px;
+    }
+
+    .text-body-two{
+        font-family: 'Arial Black';
+        font-size: 20px;
+        color: white;
+        text-shadow: 2px 2px rgb(19, 20, 20);
+        margin-left: 20px;
+        margin-right: 20px;
+        position: absolute;
+        bottom: 40px;
+    }
+
+}

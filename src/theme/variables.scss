@@ -43,6 +43,7 @@ $colors: (
   dark:           #222,
   energy:         #fffb00,
   miniFabBotton:  #38864f,
+  intro-text:     #34d42e,
   menuColor:      #fde288,
   buttonColor:    #fccb2d
 );
@@ -95,4 +96,6 @@ $colors: (
 
 
 // Toast MD
-$toast-md-background: color($colors, secondary);
+$toast-md-background: color($colors, primary);
+$toast-width:         100%;
+$toast-max-width:     600px;
