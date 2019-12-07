@@ -8,6 +8,9 @@ import { ListPage } from '../pages/list/list';
 import { AboutPageModule } from '../pages/about/about.module';
 import { AcuerdoPageModule } from '../pages/acuerdo/acuerdo.module';
 import { WelcomePageModule } from '../pages/welcome/welcome.module';
+import { IntroductionPage } from '../pages/introduction/introduction';
+import { Paletas } from '../publicidad/paletas';
+import { Passenger } from '../users/fb.passenger';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -20,9 +23,6 @@ import { Toast } from '@ionic-native/toast';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
-import { Paletas } from '../publicidad/paletas';
-import { Passenger } from '../users/fb.passenger';
-import { IntroductionPage } from '../pages/introduction/introduction';
 
 const firebaseConfig = {
   apiKey: "AIzaSyDaRTTHOVxs0RwAw9baRO6_6JSGiipTQu8",
